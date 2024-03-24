@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team renders Profile component and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-44o3pl"
+  >
+    <div
+      class="css-1mhvcxt"
+    >
+      <div
+        class="css-j7qwjs"
+      >
+        <img
+          class="chakra-image css-g1rp98"
+          src="https://tewbhv.vtexassets.com/arquivos/ids/158560/image-3fa4291f01d643978250dabb62fa556d.jpg?v=638064571894230000"
+        />
+        <div
+          class="css-9jmnaf"
+        >
+          <img
+            class="chakra-image css-r3tnns"
+            src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/avatar-1.jpeg"
+          />
+          <p
+            class="chakra-text css-13ufrgq"
+          >
+            Pedro Guilherme
+          </p>
+          <p
+            class="chakra-text css-3jgsvj"
+          >
+            Engenheiro de Dados
+          </p>
+        </div>
+        <p
+          class="chakra-text css-mufhc5"
+        >
+          Pedro é um engenheiro de dados que cria soluções para análise de grandes volumes de dados, 
+        gerando insights importantes para os negócios.
+        </p>
+      </div>
+      <div
+        class="css-7m4n47"
+      >
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          PowerBI
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          SQL
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          Python
+        </span>
+      </div>
+    </div>
+    <div
+      class="css-1mhvcxt"
+    >
+      <div
+        class="css-j7qwjs"
+      >
+        <img
+          class="chakra-image css-g1rp98"
+          src="https://www.codingem.com/wp-content/uploads/2021/10/juanjo-jaramillo-mZnx9429i94-unsplash-1024x683.jpg"
+        />
+        <div
+          class="css-9jmnaf"
+        >
+          <img
+            class="chakra-image css-r3tnns"
+            src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/avatar-3.jpeg"
+          />
+          <p
+            class="chakra-text css-13ufrgq"
+          >
+            Mayara Oliveira
+          </p>
+          <p
+            class="chakra-text css-3jgsvj"
+          >
+            Desenvolvedora de Software
+          </p>
+        </div>
+        <p
+          class="chakra-text css-mufhc5"
+        >
+          Mayara, 24 anos, graduanda em Análise e Desenvolvimento de Sistemas, com mais de 2 anos 
+        de experiência como desenvolvedora full stack. Futura colega de trabalho. 😊
+        </p>
+      </div>
+      <div
+        class="css-7m4n47"
+      >
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          Node
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          PostgreSQL
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          Vue
+        </span>
+      </div>
+    </div>
+    <div
+      class="css-1mhvcxt"
+    >
+      <div
+        class="css-j7qwjs"
+      >
+        <img
+          class="chakra-image css-g1rp98"
+          src="https://p1p.com.br/blog/wp-content/uploads/2016/02/Dashboards-I.jpg"
+        />
+        <div
+          class="css-9jmnaf"
+        >
+          <img
+            class="chakra-image css-r3tnns"
+            src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/avatar-2.jpg"
+          />
+          <p
+            class="chakra-text css-13ufrgq"
+          >
+            John Doe
+          </p>
+          <p
+            class="chakra-text css-3jgsvj"
+          >
+            Product Manager
+          </p>
+        </div>
+        <p
+          class="chakra-text css-mufhc5"
+        >
+          John é um gerente de produto inovador, que lidera equipes multifuncionais para desenvolver 
+        soluções de ponta que atendam às necessidades do mercado e dos clientes.
+        </p>
+      </div>
+      <div
+        class="css-7m4n47"
+      >
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          Agile
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          JIRA
+        </span>
+        <span
+          class="chakra-badge css-aene3b"
+        >
+          Scrum
+        </span>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;

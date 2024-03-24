@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile renders Profile component and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mhvcxt"
+  >
+    <div
+      class="css-j7qwjs"
+    >
+      <img
+        class="chakra-image css-g1rp98"
+        src="testBackground.jpg"
+      />
+      <div
+        class="css-9jmnaf"
+      >
+        <img
+          class="chakra-image css-r3tnns"
+          src="testProfile.jpg"
+        />
+        <p
+          class="chakra-text css-13ufrgq"
+        >
+          John Doe
+        </p>
+        <p
+          class="chakra-text css-3jgsvj"
+        >
+          Engineer
+        </p>
+      </div>
+      <p
+        class="chakra-text css-mufhc5"
+      >
+        Engineer with 5 years of experience
+      </p>
+    </div>
+    <div
+      class="css-7m4n47"
+    >
+      <span
+        class="chakra-badge css-aene3b"
+      >
+        tag1
+      </span>
+      <span
+        class="chakra-badge css-aene3b"
+      >
+        tag2
+      </span>
+      <span
+        class="chakra-badge css-aene3b"
+      >
+        tag3
+      </span>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;

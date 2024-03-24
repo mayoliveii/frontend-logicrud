@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vehicle renders Vehicle component with given props 1`] = `
+<DocumentFragment>
+  <div
+    class="css-n01s3f"
+  >
+    <div
+      class="chakra-card css-1qsi179"
+    >
+      <img
+        alt="Random vehicle category image"
+        class="chakra-image css-5sx6j7"
+        src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/logistic-image-4.jpg"
+      />
+      <div
+        class="chakra-stack css-tgpajw"
+      >
+        <div
+          class="chakra-card__body css-1idwstw"
+        >
+          <div
+            class="css-z7mtfw"
+          >
+            <h2
+              class="chakra-heading css-18j379d"
+            >
+              Test Title
+            </h2>
+            <div
+              class="css-zdpt2t"
+            >
+              <span
+                class="chakra-badge css-n2903v"
+              >
+                1
+              </span>
+            </div>
+          </div>
+          <p
+            class="chakra-text css-1j1i25b"
+          >
+            Test Description
+          </p>
+        </div>
+        <ul
+          class="css-12ac9ad"
+          role="list"
+        >
+          <li
+            class="css-0"
+          >
+            <svg
+              class="chakra-icon css-fqvyxk"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            Creation date:
+            <span
+              class="chakra-code css-6zduvx"
+            >
+              24/03/2024 14:38
+            </span>
+          </li>
+          <li
+            class="css-0"
+          >
+            <svg
+              class="chakra-icon css-en28wy"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+              <path
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+              />
+            </svg>
+            Update date:
+            <span
+              class="chakra-code css-6zduvx"
+            >
+              24/03/2024 14:38
+            </span>
+          </li>
+        </ul>
+        <div
+          class="chakra-card__footer css-1a7q9t8"
+        >
+          <button
+            class="chakra-button css-1uhuy6t"
+            type="button"
+          >
+            editar
+          </button>
+          <button
+            class="chakra-button css-q373e6"
+            type="button"
+          >
+            deletar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;
