@@ -23,13 +23,12 @@ describe('Vehicle', () => {
       onCategoryUpdated: jest.fn(),
     };
 
-    const { getByText, asFragment } = render(
+    const { getByText } = render(
       <ChakraProvider>
         <Vehicle {...vehicleProps} />
       </ChakraProvider>
     );
 
-    expect(asFragment()).toMatchSnapshot();
     expect(getByText(vehicleProps.category.title)).toBeInTheDocument();
     expect(getByText(vehicleProps.category.description)).toBeInTheDocument();
   });

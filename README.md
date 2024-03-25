@@ -44,6 +44,20 @@ Open the browser and navigate to:
 http://localhost:5173/
 ```
 
+## Tests
+
+This project uses Jest for testing. To run the tests, use the following command:
+
+```bash
+npm test
+```
+
+To generate a coverage report when running the tests, use the following command:
+
+```bash
+npm test --coverage
+```
+
 ## Deploy on Vercel
 This project can also be accessed through the Vercel deployment at:
 > https://frontend-logicrud.vercel.app/
