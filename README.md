@@ -12,25 +12,10 @@ This project is a CRUD (Create, Read, Update, Delete) application for efficient 
 - **Date Filter:** Enables filtering vehicle categories based on creation date, allowing users to view categories within specific date ranges.
 
 ## Image Storage
-The images used in this application are stored in Amazon S3.
+The images used in this application are stored in **Amazon S3**.
 
 ## Application Structure
 The project structure follows a modular approach for better organization and scalability.
-
-```
-frontend-logicrud/
-|-- src/
-|   |-- public/
-|-- src/
-|   |-- apiServices/
-|   |-- components/
-|   |-- helpers/
-|   |-- main.tsx
-|-- tsconfig.json
-|-- .env
-|-- package.json
-|-- ..others configurations
-```
 
 - apiServices/: Manages API requests using Axios.
 - components/: Contains React components for the application.
@@ -61,7 +46,7 @@ http://localhost:5173/
 
 ## Deploy on Vercel
 This project can also be accessed through the Vercel deployment at:
-> TODO: colocar link aqui
+> https://frontend-logicrud.vercel.app/
 
 ## Backend Integration
 - The application communicates with a [backend](https://github.com/mayoliveii/backend-logicrud) to perform category-related operations.
