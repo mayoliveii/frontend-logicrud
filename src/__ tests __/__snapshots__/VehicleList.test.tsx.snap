@@ -112,36 +112,35 @@ exports[`VehicleList renders VehicleList component and matches snapshot 1`] = `
       value=""
     />
     <div
-      class="css-9gtaw2"
+      class="css-1qq1sqf"
     >
       <div
-        class="css-1baulvz"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        class="chakra-progress css-120wkjd"
+        data-indeterminate=""
+        role="progressbar"
       >
-        <div
-          class="css-f5kz2b"
+        <svg
+          class="css-jf70f3"
+          viewBox="0 0 100 100"
         >
-          <svg
-            class="chakra-icon css-1x7z2yw"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
+          <circle
+            class="chakra-progress__track css-ol3i12"
+            cx="50"
+            cy="50"
+            r="42"
+            stroke-width="10px"
+          />
+          <circle
+            class="chakra-progress__indicator css-u3myz4"
+            cx="50"
+            cy="50"
+            r="42"
+            stroke-width="10px"
+          />
+        </svg>
       </div>
-      <h2
-        class="chakra-heading css-1wib1wc"
-      >
-        Nenhuma categoria de veículo cadastrada 😰
-      </h2>
-      <p
-        class="chakra-text css-q9k0mw"
-      >
-        Não há categorias de veículos disponíveis em nosso sistema no momento. Por favor, adicione uma nova categoria.
-      </p>
     </div>
   </div>
   <span

@@ -30,6 +30,7 @@ interface CreateModalProps {
 
 export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalProps) {
   const [formState, setFormState] = useState({ title: '', description: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
@@ -39,6 +40,7 @@ export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalPro
   };
 
   const handleSubmit = async () => {
+    setIsLoading(true);
     try {
       const newCategory = await apiService.createCategory(formState);
 
@@ -52,6 +54,8 @@ export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalPro
       return newCategory;
     } catch (error: any) {
       throw new Error(`Error creating category: ${error}`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -108,7 +112,7 @@ export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalPro
           </Box>
         </ModalBody>
         <ModalFooter>
-          <Button bg="#FF7A50" mr={3} color={'white'} _hover={{ bg: '#FF5823' }} onClick={handleSubmit}>
+          <Button bg="#FF7A50" mr={3} color={'white'} _hover={{ bg: '#FF5823' }} onClick={handleSubmit} isLoading={isLoading}>
             Salvar
           </Button>
           <Button variant="ghost" onClick={onClose}>

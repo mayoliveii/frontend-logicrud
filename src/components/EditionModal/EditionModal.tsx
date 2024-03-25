@@ -36,11 +36,14 @@ export function EditionModal({ category, onCategoryUpdated }: EditModalProps) {
 
   const [title, setTitle] = useState(category.title);
   const [description, setDescription] = useState(category.description);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => setTitle(event.target.value);
   const handleDescriptionChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(event.target.value);
 
   const handleSubmit = async () => {
+    setIsLoading(true);
+
     try {
       const updatedCategory = await apiService.editCategory({ id: category.id, title, description });
       setTitle('');
@@ -54,6 +57,8 @@ export function EditionModal({ category, onCategoryUpdated }: EditModalProps) {
       return updatedCategory;
     } catch (error: any) {
       throw new Error(`Error updating category: ${error.message}`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -115,7 +120,7 @@ export function EditionModal({ category, onCategoryUpdated }: EditModalProps) {
             </Box>
           </ModalBody>
           <ModalFooter>
-            <Button bg='#FF7A50' mr={3} color={'white'} _hover={{ bg: '#FF5823' }} onClick={handleSubmit}>
+            <Button bg='#FF7A50' mr={3} color={'white'} _hover={{ bg: '#FF5823' }} onClick={handleSubmit} isLoading={isLoading}>
               Salvar
             </Button>
             <Button variant='ghost' onClick={onClose}>cancelar</Button>

@@ -1,5 +1,5 @@
 import { Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogCloseButton, AlertDialogBody, AlertDialogFooter } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 interface DeletionModalProps {
   isOpen: boolean;
@@ -8,7 +8,15 @@ interface DeletionModalProps {
 }
 
 export const DeletionModal: React.FC<DeletionModalProps> = ({ isOpen, onClose, onConfirm }) => {
+
+  const [isLoading, setIsLoading] = useState(false);
   const cancelRef = React.useRef<HTMLButtonElement>(null);
+
+  const handleConfirm = async () => {
+    setIsLoading(true);
+    await onConfirm();
+    setIsLoading(false);
+  };
 
   return (
     <>
@@ -30,7 +38,14 @@ export const DeletionModal: React.FC<DeletionModalProps> = ({ isOpen, onClose, o
             <Button ref={cancelRef} onClick={onClose}>
               cancelar
             </Button>
-            <Button bg={'#FF7A50'} _hover={{ bg: '#FF5823' }} color={'white'} ml={3} onClick={onConfirm}>
+            <Button
+              isLoading={isLoading}
+              bg={'#FF7A50'}
+              _hover={{ bg: '#FF5823' }}
+              color={'white'}
+              ml={3}
+              onClick={handleConfirm}
+            >
               Sim
             </Button>
           </AlertDialogFooter>

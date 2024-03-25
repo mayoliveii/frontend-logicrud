@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import apiService, { CategoryData } from '../../apiServices/apiService';
-import { Button, CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react';
+import { Button, Center, CircularProgress, CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react';
 import Vehicle from '../Vehicle/Vehicle';
 import { Input } from "@chakra-ui/react";
 import NotFoundMessage from '../NotFoundMessage/NotFoundMessage';
@@ -24,8 +24,10 @@ export default function VehicleList() {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [isDateFilterApplied, setDateFilterApplied] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchCategories = useCallback(async () => {
+    setIsLoading(true);
     const allCategories = await apiService.getAllCategories({
       orderBy: 'created_at_DESC',
       startDate: startDate ? startDate.toISOString() : undefined,
@@ -33,6 +35,7 @@ export default function VehicleList() {
     });
     setCategories(allCategories);
     setDateFilterApplied(!!startDate || !!endDate);
+    setIsLoading(false);
   }, [startDate, endDate]);
 
   useEffect(() => {
@@ -132,7 +135,11 @@ export default function VehicleList() {
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
-      {filteredCategories.length > 0 ? (
+      {isLoading ? (
+        <Center ml={'auto'} h={'50vh'}>
+          <CircularProgress isIndeterminate color='orange.500' />
+        </Center>
+      ) : filteredCategories.length > 0 ? (
         filteredCategories.map(category => (
           <Vehicle key={category.title} category={category} onCategoryDeleted={updateVehicleList} onCategoryUpdated={updateVehicleList} />
         ))
