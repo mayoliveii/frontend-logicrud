@@ -69,7 +69,7 @@ export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalPro
         <Input
           type="text"
           name="title"
-          placeholder="Your Name"
+          placeholder="Category name"
           value={formState.title}
           onChange={handleInputChange}
         />
@@ -82,7 +82,7 @@ export function CreateModal({ isOpen, onClose, onCategoryAdded }: CreateModalPro
       <FormLabel>Descrição</FormLabel>
       <Textarea
         name="description"
-        placeholder="Your Message"
+        placeholder="Category description"
         rows={6}
         resize="none"
         value={formState.description}

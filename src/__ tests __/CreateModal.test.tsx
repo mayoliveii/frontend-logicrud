@@ -27,8 +27,8 @@ describe('CreateModal component', () => {
       </ChakraProvider>
     );
 
-    fireEvent.change(getByPlaceholderText('Your Name'), { target: { value: 'Test' } });
-    fireEvent.change(getByPlaceholderText('Your Message'), { target: { value: 'Test' } });
+    fireEvent.change(getByPlaceholderText('Category name'), { target: { value: 'Test' } });
+    fireEvent.change(getByPlaceholderText('Category description'), { target: { value: 'Test' } });
     fireEvent.click(getByText('Salvar'));
 
     await waitFor(() => expect(onClose).toHaveBeenCalled());
@@ -42,8 +42,8 @@ describe('CreateModal component', () => {
       </ChakraProvider>
     );
 
-    fireEvent.change(getByPlaceholderText('Your Name'), { target: { value: 'Test' } });
-    fireEvent.change(getByPlaceholderText('Your Message'), { target: { value: 'Test' } });
+    fireEvent.change(getByPlaceholderText('Category name'), { target: { value: 'Test' } });
+    fireEvent.change(getByPlaceholderText('Category description'), { target: { value: 'Test' } });
     fireEvent.click(getByText('Salvar'));
 
     await waitFor(() => expect(onClose).toHaveBeenCalled());
