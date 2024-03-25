@@ -85,7 +85,7 @@ export function EditionModal({ category, onCategoryUpdated }: EditModalProps) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Adicionar nova categoria de veículo</ModalHeader>
+          <ModalHeader>Editar categoria de veículo</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box
