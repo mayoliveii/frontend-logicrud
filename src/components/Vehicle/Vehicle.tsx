@@ -22,7 +22,7 @@ import { formatDate } from '../../helpers/date.ts';
 import { DeletionModal } from "../DeletionModal/DeletionModal.tsx";
 import { EditionModal } from "../EditionModal/EditionModal.tsx";
 import { useEffect, useState } from "react";
-import { IMAGE_URL_S3 } from "./images-s3.ts";
+import { IMAGE_PATH } from "./images-s3.ts";
 
 export interface VehicleProps {
   category: CategoryData;
@@ -31,9 +31,9 @@ export interface VehicleProps {
 }
 
 function getRandomVehicleImageUrl() {
-  const randomIndex = Math.floor(Math.random() * IMAGE_URL_S3.length);
-  const imageName = IMAGE_URL_S3[randomIndex];
-  return `https://mayoliveii.s3.us-east-2.amazonaws.com/images/${imageName}`;
+  const randomIndex = Math.floor(Math.random() * IMAGE_PATH.length);
+  const imageUrl = IMAGE_PATH[randomIndex];
+  return imageUrl;
 }
 
 export default function Vehicle({ category, onCategoryDeleted, onCategoryUpdated }: VehicleProps) {
