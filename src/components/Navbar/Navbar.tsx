@@ -61,7 +61,7 @@ export const MenuComponent = () => (
       minW={0}>
       <Avatar
         size={'sm'}
-        src={'/images/avatar-3.png`'}
+        src={'/images/avatar-3.png'}
         style={{ maxWidth: '40px', maxHeight: '40px', borderRadius: '50%' }}
       />
     </MenuButton>
