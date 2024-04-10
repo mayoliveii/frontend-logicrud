@@ -61,7 +61,7 @@ export const MenuComponent = () => (
       minW={0}>
       <Avatar
         size={'sm'}
-        src={'https://mayoliveii.s3.us-east-2.amazonaws.com/images/avatar-4.jpeg'}
+        src={'/images/avatar-3.png`'}
         style={{ maxWidth: '40px', maxHeight: '40px', borderRadius: '50%' }}
       />
     </MenuButton>
@@ -104,7 +104,7 @@ export default function Navbar() {
           <HStack spacing={8} alignItems={'center'}>
             <NavLink noHover href="/">
               <Image
-                src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/logicrud-logo.jpg"
+                src="/images/logo.png"
                 alt="Logo"
                 width="150px"
                 height="80px"

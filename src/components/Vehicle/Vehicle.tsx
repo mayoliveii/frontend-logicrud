@@ -69,7 +69,7 @@ export default function Vehicle({ category, onCategoryDeleted, onCategoryUpdated
           boxSize={{ base: '50%', sm: '200px' }}
           height={{ base: '50%', sm: '330px' }}
           objectFit='cover'
-          src={imageUrl} // Use imageUrl here
+          src={imageUrl}
           alt='Random vehicle category image'
         />
         <Stack w={'100%'}>

@@ -44,7 +44,7 @@ export const AboutAuthor: React.FC<AboutAuthorProps> = ({ date, name }) => (
     <Image
       borderRadius="full"
       boxSize="40px"
-      src="https://mayoliveii.s3.us-east-2.amazonaws.com/images/avatar-5.jpg"
+      src="/images/avatar-5.png"
       alt={`Avatar of ${name}`}
     />
     <Text fontWeight="medium">{name}</Text>
@@ -80,7 +80,7 @@ export default function About() {
                 borderRadius="lg"
                 ml={3}
                 src={
-                  'https://mayoliveii.s3.us-east-2.amazonaws.com/controller-logistic+(2)+(1).jpg'
+                  '/images/controller-logistic.jpg'
                 }
                 alt="Imagem de um caminhão de transporte de carga"
                 objectFit="contain"

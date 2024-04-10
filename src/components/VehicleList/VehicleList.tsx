@@ -31,7 +31,7 @@ export default function VehicleList() {
     setIsLoading(true);
     const timeoutId = setTimeout(() => {
       setShowAlert(true);
-    }, 5000); // Mostrar alerta após 5 segundos
+    }, 5000);
 
     try {
       const allCategories = await apiService.getAllCategories({

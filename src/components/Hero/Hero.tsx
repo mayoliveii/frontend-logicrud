@@ -112,7 +112,7 @@ export default function Hero() {
               w={'100%'}
               h={'100%'}
               src={
-                'https://mayoliveii.s3.us-east-2.amazonaws.com/images/merchandise-truck.jpg'
+                '/images/merchandise-truck.png'
               }
             />
           </Box>
