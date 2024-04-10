@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import apiService, { CategoryData } from '../../apiServices/apiService';
-import { Button, Center, CircularProgress, CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react';
+import { Alert, AlertIcon, Button, Center, CircularProgress, CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react';
 import Vehicle from '../Vehicle/Vehicle';
 import { Input } from "@chakra-ui/react";
 import NotFoundMessage from '../NotFoundMessage/NotFoundMessage';
@@ -25,17 +25,29 @@ export default function VehicleList() {
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [isDateFilterApplied, setDateFilterApplied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const fetchCategories = useCallback(async () => {
     setIsLoading(true);
-    const allCategories = await apiService.getAllCategories({
-      orderBy: 'created_at_DESC',
-      startDate: startDate ? startDate.toISOString() : undefined,
-      endDate: endDate ? endDate.toISOString() : undefined
-    });
-    setCategories(allCategories);
-    setDateFilterApplied(!!startDate || !!endDate);
-    setIsLoading(false);
+    const timeoutId = setTimeout(() => {
+      setShowAlert(true);
+    }, 5000); // Mostrar alerta após 5 segundos
+
+    try {
+      const allCategories = await apiService.getAllCategories({
+        orderBy: 'created_at_DESC',
+        startDate: startDate ? startDate.toISOString() : undefined,
+        endDate: endDate ? endDate.toISOString() : undefined
+      });
+      clearTimeout(timeoutId);
+      setCategories(allCategories);
+      setDateFilterApplied(!!startDate || !!endDate);
+    } catch (error) {
+      clearTimeout(timeoutId);
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   }, [startDate, endDate]);
 
   useEffect(() => {
@@ -83,6 +95,14 @@ export default function VehicleList() {
 
   return (
     <Container maxW={'5xl'} my={20}>
+      {showAlert && isLoading && (
+        <Alert status='warning'>
+          <AlertIcon />
+          Estamos notando um atraso inesperado na resposta do nosso banco de dados.
+          Por favor, aguarde mais alguns segundos enquanto carregamos a lista para você.
+          Agradecemos a sua paciência.
+        </Alert>
+      )}
       <Flex my={8} align="center" justifyContent="space-between">
         <Button
           size={'lg'}
